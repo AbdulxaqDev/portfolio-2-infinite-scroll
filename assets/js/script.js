@@ -7,7 +7,7 @@ let totalImages = 0;
 let photosArray = [];
 
 // Unsplash API
-const count = 3; 
+let count = 3; 
 const apiKey = 'DNw9cnqiTwipb-QmBcd8nmo6dIb6XSOpkZqLfq-68Mk';
 const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`;
 
@@ -45,7 +45,7 @@ function displayPhotos() {
         // Create <img> for photo
         const img = document.createElement('img');
         setAttributes(img, {
-            src: photo.urls.regular,
+            src: photo.urls.small,
             alt: photo.alt_description,
             title: photo.alt_description,
 
